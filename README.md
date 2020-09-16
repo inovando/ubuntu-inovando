@@ -30,3 +30,11 @@ bash setup.sh
 - [x] ZSH
 - [x] Flameshot (print part of screen and copy to clipboard)
 - [x] Peek (record GIFs)
+
+## FAQ
+
+### What's the Postgres password?
+- root
+
+### I already have Node.js/npm/docker/etc installed, will it update for me?
+- No, this script will only install apps if you didn't have them installed before (to prevent duplications).
