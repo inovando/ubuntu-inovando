@@ -23,7 +23,7 @@ sudo snap install dbeaver-ce
 sudo snap install spotify
 
 # ------------------
-# FortiCliente (for vpns)
+# FortiClient (for vpns)
 # ------------------
 if ! [ -x "$(command -v openfortigui)" ]; then
   wget https://apt.iteas.at/iteas/pool/main/o/openfortigui/openfortigui_0.9.0-3_amd64_focal.deb
