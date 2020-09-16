@@ -10,3 +10,23 @@ chmod +x setup.sh
 bash setup.sh
 # after this command, reboot your system :)
 ```
+
+## Features
+- [x] Git
+- [x] Curl
+- [x] ssh-keygen
+- [x] VSCode
+- [x] Chrome
+- [x] openFortiGUI
+- [x] Postman
+- [x] Discord
+- [x] Spotify
+- [x] DBeaver CE
+- [x] Docker
+- [x] Docker Compose
+- [x] Postgres (from docker image)
+- [x] NVM
+- [x] Yarn
+- [x] ZSH
+- [x] Flameshot (print part of screen and copy to clipboard)
+- [x] Peek (record GIFs)
