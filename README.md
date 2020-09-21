@@ -5,7 +5,7 @@ Custom Ubuntu Desktop ISO Image &amp; bash script with pre-installed/configured 
 
 ## Setup
 ```bash
-wget https://github.com/inovando/ubuntu-inovando/blob/master/setup.sh
+wget https://raw.githubusercontent.com/inovando/ubuntu-inovando/master/setup.sh
 chmod +x setup.sh
 bash setup.sh
 # after this command, reboot your system :)
