@@ -15,12 +15,38 @@ sudo apt autoremove -y
 sudo apt install git -y
 sudo apt install curl -y
 sudo apt install xclip -y
-sudo apt install flameshot
+sudo apt install flameshot -y
+sudo apt install openjdk-8-jre -y
 sudo snap install code --classic
 sudo snap install discord
 sudo snap install postman
 sudo snap install dbeaver-ce
 sudo snap install spotify
+sudo snap install android-studio --classic
+
+# ------------------
+# Android permissions
+# ------------------
+sudo adduser $USER kvm
+
+# ------------------
+# Homebrew (for Watchman)
+# ------------------
+if ! [ -x "$(command -v brew)" ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+# ------------------
+# Watchman (React Native live server dependency)
+# ------------------
+if ! [ -x "$(command -v watchman)" ]; then
+  brew update
+  brew install watchman
+  echo 256 | sudo tee -a /proc/sys/fs/inotify/max_user_instances
+  echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_queued_events
+  echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
+  watchman shutdown-server
+fi
 
 # ------------------
 # FortiClient (for vpns)
@@ -141,6 +167,7 @@ ZSH_THEME=\"spaceship\"
 
 plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
 source \$ZSH/oh-my-zsh.sh
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 " > $HOME/.zshrc
 
 echo ""

@@ -30,6 +30,7 @@ bash setup.sh
 - [x] ZSH
 - [x] Flameshot (print part of screen and copy to clipboard)
 - [x] Peek (record GIFs)
+- [x] Android Studio
 
 ## FAQ
 
