@@ -17,6 +17,7 @@ sudo apt install curl -y
 sudo apt install xclip -y
 sudo apt install flameshot -y
 sudo apt install openjdk-8-jre -y
+sudo apt-get install openjdk-8-jdk -y
 sudo snap install code --classic
 sudo snap install discord
 sudo snap install postman
