@@ -146,9 +146,9 @@ sudo chsh -s /bin/zsh
 
 echo "
 # Defaults
-export PATH=\$HOME/bin:/usr/local/bin:$(yarn global bin):\$PATH
-export ZSH=/home/$(whoami)/.oh-my-zsh
-export DEFAULT_USER=\"$(whoami)\"
+export PATH=\$HOME/bin:/usr/local/bin:\$(yarn global bin):\$PATH
+export ZSH=/home/\$(whoami)/.oh-my-zsh
+export DEFAULT_USER=\"\$(whoami)\"
 export EDITOR=\"code --reuse-window\"
 export TERM=\"xterm-256color\"
 export NVM_DIR=\"\$HOME/.nvm\"
@@ -156,11 +156,11 @@ export NVM_DIR=\"\$HOME/.nvm\"
 [ -s \"\$NVM_DIR/bash_completion\" ] && \. \"\$NVM_DIR/bash_completion\"  # This loads nvm bash_completion
 
 # Android
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=\$HOME/Android/Sdk
+export PATH=\$PATH:\$ANDROID_HOME/emulator
+export PATH=\$PATH:\$ANDROID_HOME/tools
+export PATH=\$PATH:\$ANDROID_HOME/tools/bin
+export PATH=\$PATH:\$ANDROID_HOME/platform-tools
 
 # Fast edit config files aliases
 alias ez=\"\$EDITOR ~/.zshrc\"
@@ -175,7 +175,7 @@ ZSH_THEME=\"spaceship\"
 
 plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
 source \$ZSH/oh-my-zsh.sh
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+eval \$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 " > $HOME/.zshrc
 
 echo ""
